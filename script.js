@@ -98,15 +98,11 @@ function createValidMap() {
         element.x == snake.snakeArray[i].x &&
         element.y == snake.snakeArray[i].y
       ) {
-        console.log(element);
         return false;
       }
     }
     return true;
   });
-  console.log(snake.snakeArray[0]);
-  console.log(snake.snakeArray[1]);
-  console.log(newValidMap);
   return newValidMap;
 }
 
