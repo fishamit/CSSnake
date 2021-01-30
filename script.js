@@ -5,18 +5,21 @@ const startLocationX = Math.floor(Math.random() * 4 + 3);
 const startLocationY = Math.floor(Math.random() * 4 + 3);
 
 const screen = grabScreen();
+
 let growing = false;
-let speed = 300;
+let speed = 350;
+
 const snake = {
   direction: direction[Math.floor(Math.random() * 4)],
   snakeArray: [{ x: startLocationX, y: startLocationY }],
 };
-growSnake();
 
-let apple = {
+const apple = {
   x: 0,
   y: 0,
 };
+
+growSnake();
 
 resetApple();
 
@@ -63,6 +66,8 @@ window.addEventListener("keydown", function (e) {
     }
   }
 });
+
+game();
 let loop = window.setInterval(game, speed);
 
 function game() {
@@ -76,6 +81,33 @@ function game() {
   handleApple();
   drawApple();
   drawSnake();
+}
+
+function createValidMap() {
+  let map = [];
+
+  for (let i = 0; i < screenSizeY; i++) {
+    for (let j = 0; j < screenSizeX; j++) {
+      map.push({ x: j, y: i });
+    }
+  }
+
+  let newValidMap = map.filter(function (element) {
+    for (let i = 0; i < snake.snakeArray.length; i++) {
+      if (
+        element.x == snake.snakeArray[i].x &&
+        element.y == snake.snakeArray[i].y
+      ) {
+        console.log(element);
+        return false;
+      }
+    }
+    return true;
+  });
+  console.log(snake.snakeArray[0]);
+  console.log(snake.snakeArray[1]);
+  console.log(newValidMap);
+  return newValidMap;
 }
 
 function handleApple() {
@@ -101,15 +133,19 @@ function drawApple() {
 }
 
 function resetApple() {
-  let newx;
-  let newy;
-  do {
-    newx = Math.floor(Math.random() * 10);
-    newy = Math.floor(Math.random() * 10);
-  } while (checkAppleCollision(newx, newy));
+  // let newx;
+  // let newy;
+  // do {
+  //   newx = Math.floor(Math.random() * 10);
+  //   newy = Math.floor(Math.random() * 10);
+  // } while (checkAppleCollision(newx, newy));
+  // apple.x = newx;
+  // apple.y = newy;
+  let validMap = createValidMap();
 
-  apple.x = newx;
-  apple.y = newy;
+  let newCoords = validMap[Math.floor(Math.random() * validMap.length)];
+  apple.x = newCoords.x;
+  apple.y = newCoords.y;
 }
 
 function checkAppleCollision(newx, newy) {
