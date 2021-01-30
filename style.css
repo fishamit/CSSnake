@@ -1,0 +1,67 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  width: 100vw;
+  background-color: #e6daa7;
+  height: 100vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  margin: 20px;
+  border-radius: 5%;
+  width: 30vw;
+  height: 30vw;
+  min-width: 500px;
+  min-height: 500px;
+  background-color: #0f380f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5%;
+}
+
+.square {
+  width: 9%;
+  height: 9%;
+  margin: 0.5%;
+  -webkit-box-shadow: inset 0 0 20px 0 #306230bb;
+          box-shadow: inset 0 0 20px 0 #306230bb;
+  border-radius: 2px;
+  background-color: #8bac0f;
+}
+
+.topleft {
+  border-top-left-radius: 50%;
+}
+
+.topright {
+  border-top-right-radius: 50%;
+}
+
+.bottomright {
+  border-bottom-right-radius: 50%;
+}
+
+.bottomleft {
+  border-bottom-left-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */
