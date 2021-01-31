@@ -202,7 +202,7 @@ function resetGame() {
     { x: 3, y: 5 },
   ];
   resetApple();
-  speed = 300;
+  speed = 350;
   snake.direction = "up";
   setLoop();
 }
