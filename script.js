@@ -129,14 +129,6 @@ function drawApple() {
 }
 
 function resetApple() {
-  // let newx;
-  // let newy;
-  // do {
-  //   newx = Math.floor(Math.random() * 10);
-  //   newy = Math.floor(Math.random() * 10);
-  // } while (checkAppleCollision(newx, newy));
-  // apple.x = newx;
-  // apple.y = newy;
   let validMap = createValidMap();
 
   let newCoords = validMap[Math.floor(Math.random() * validMap.length)];
