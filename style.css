@@ -1,5 +1,5 @@
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   width: 100vw;
   background-color: #e6daa7;
   height: 100vh;
@@ -26,8 +26,10 @@ h1 {
 .container {
   margin: 20px;
   border-radius: 5%;
-  width: 600px;
-  height: 600px;
+  width: 50vh;
+  height: 50vh;
+  min-width: 300px;
+  min-height: 300px;
   background-color: #0f380f;
   display: -webkit-box;
   display: -ms-flexbox;
