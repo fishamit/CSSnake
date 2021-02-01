@@ -247,7 +247,7 @@ function clearScreen() {
   for (let i = 0; i < screenSizeY; i++) {
     for (let j = 0; j < screenSizeX; j++) {
       screen[i][j].style.backgroundColor = "#8bac0f";
-      screen[i][j].style.boxShadow = "inset 0 0 0.7rem 0 #306230bb";
+      screen[i][j].style.boxShadow = "inset 0 0 0.7em 0 #306230bb";
     }
   }
 }
